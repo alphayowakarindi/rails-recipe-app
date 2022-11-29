@@ -1,12 +1,13 @@
 <section id="recipes">
-  <div class="recipe-card">
-    <div class="title">
-      <h3>Recipe 1</h3>
-      <a href="">REMOVE</a>
+  <% @recipes.each do |recipe| %>
+    <div class="recipe-card">
+      <div class="title">
+        <h3> <%= recipe.name %> </h3>
+        <a href="">REMOVE</a>
+      </div>
+      <div class="info">
+        <p> <%= recipe.description %> </p>
+      </div>
     </div>
-    <div class="info">
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae in praesentium maiores.
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. In a dolor necessitatibus iusto possimus ipsa modi laborum placeat sunt sint!</p>
-    </div>
-  </div>
+  <% end %>
 </section>
