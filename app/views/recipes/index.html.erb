@@ -3,7 +3,10 @@
     <div class="recipe-card">
       <div class="title">
         <h3> <%= recipe.name %> </h3>
-        <a href="">REMOVE</a>
+        <%= link_to "REMOVE", recipe_path(recipe), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %>
       </div>
       <div class="info">
         <p> <%= recipe.description %> </p>
