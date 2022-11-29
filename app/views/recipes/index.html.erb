@@ -3,10 +3,12 @@
     <div class="recipe-card">
       <div class="title">
         <h3> <%= recipe.name %> </h3>
-        <%= link_to "REMOVE", recipe_path(recipe), data: {
+        <% if can? :destroy, recipe %>
+          <%= link_to "REMOVE", recipe_path(recipe), data: {
                     turbo_method: :delete,
                     turbo_confirm: "Are you sure?"
                   } %>
+        <% end %>
       </div>
       <div class="info">
         <p> <%= recipe.description %> </p>
