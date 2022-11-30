@@ -190,3 +190,10 @@ textarea,
 .recipe-steps {
   white-space: pre-wrap;
 }
+
+/* validation */
+.validation-error {
+  color: red;
+  margin-top: 2px;
+  margin-bottom: 8px;
+}
