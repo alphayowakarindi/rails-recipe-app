@@ -49,3 +49,138 @@
   color: #000;
   font-size: 19px;
 }
+
+/* recipe details */
+#recipe-details {
+  padding: 0 25px;
+}
+
+#recipe-details h1 {
+  font-size: 26px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+#recipe-details .recipe-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 25px;
+}
+
+#recipe-details .recipe-info .duration {
+  display: block;
+  margin-bottom: 12px;
+}
+
+#recipe-details .publicity-status {
+  text-align: right;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 18px;
+  left: 1px;
+  bottom: 1px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: green;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px green;
+}
+
+input:checked + .slider::before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round::before {
+  border-radius: 50%;
+}
+
+#recipe-details .btn-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
+#recipe-details .btn-links .btn-link {
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.8);
+  border-right: 4px solid rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  color: #000;
+  padding: 0 4px;
+  font-size: 15px;
+}
+
+#recipe-details hr {
+  max-width: 1400px;
+  margin: auto;
+  height: 3px;
+  background-color: #000;
+}
+
+#recipe-details .food-info {
+  margin-top: 28px;
+}
+
+#recipe-details .food-info table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#recipe-details .food-info table td,
+th {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+#recipe-details .food-info table th {
+  background-color: gray;
+}
+
+#recipe-details .food-info table tr:nth-child(even) {
+  background-color: rgba(221, 221, 221, 0.4);
+}
