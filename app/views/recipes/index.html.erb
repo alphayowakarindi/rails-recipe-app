@@ -2,9 +2,9 @@
   <% @recipes.each do |recipe| %>
     <div class="recipe-card">
       <div class="title">
-        <h3> <%= recipe.name %> </h3>
+        <h3> <%= link_to recipe.name, recipe %> </h3>
         <% if can? :destroy, recipe %>
-          <%= link_to "REMOVE", recipe_path(recipe), data: {
+          <%=  link_to "REMOVE", recipe_path(recipe), data: {
                     turbo_method: :delete,
                     turbo_confirm: "Are you sure?"
                   } %>
