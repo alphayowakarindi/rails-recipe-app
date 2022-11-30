@@ -1,17 +1,17 @@
 <section id="recipe-details">
-  <h1>Recipe 1</h1>
+  <h1> <%=@recipe.name%> </h1>
   <div class="recipe-info">
     <div>
-      <span class="duration">Preparation time: 1 hour</span>
-      <span class="duration">Cooking time: 1.5 hours</span>
+      <span class="duration">Preparation time: <%=@recipe.preparation_time%> </span>
+      <span class="duration">Cooking time: <%=@recipe.cooking_time%> </span>
       <p class="recipe-steps">
-        Steps goes here...
+        <%=@recipe.description%>
       </p>
     </div>
     <div class="publicity-status">
       <span>Public</span>
       <label class="switch">
-        <input type="checkbox">
+        <input type="checkbox" <%= @recipe.public ? 'checked' : '' %> >
         <span class="slider round"></span>
       </label>
     </div>
