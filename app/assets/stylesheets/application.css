@@ -184,3 +184,9 @@ th {
 #recipe-details .food-info table tr:nth-child(even) {
   background-color: rgba(221, 221, 221, 0.4);
 }
+
+/* recipe new */
+textarea,
+.recipe-steps {
+  white-space: pre-wrap;
+}
