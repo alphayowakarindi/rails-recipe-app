@@ -1,0 +1,52 @@
+<section id="recipe-details">
+  <h1> <%=@recipe.name%> </h1>
+  <div class="recipe-info">
+    <div>
+      <span class="duration">Preparation time: <%=@recipe.preparation_time%> </span>
+      <span class="duration">Cooking time: <%=@recipe.cooking_time%> </span>
+      <p class="recipe-steps">
+        <%=@recipe.description%>
+      </p>
+    </div>
+    <div class="publicity-status">
+      <span>Public</span>
+      <label class="switch">
+        <input type="checkbox" <%= @recipe.public ? 'checked' : '' %> >
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+  <div class="btn-links">
+    <a class="btn-link" href="">Generate shopping list</a>
+    <a href="btn-link">Add ingredient</a>
+  </div>
+  <hr>
+  <div class="food-info">
+    <table>
+      <tr>
+        <th>Food</th>
+        <th>Quantity</th>
+        <th>Value</th>
+        <th>Action</th>
+      </tr>
+      <tr>
+        <td>Apple</td>
+        <td>20g</td>
+        <td>$100</td>
+        <td><a href="">Modify</a> <a href="">Remove</a></td>
+      </tr>
+      <tr>
+        <td>Pineapple</td>
+        <td>10g</td>
+        <td>$10</td>
+        <td><a href="">Modify</a> <a href="">Remove</a></td>
+      </tr>
+      <tr>
+        <td>Chicken breasts</td>
+        <td>2 units</td>
+        <td>$4</td>
+        <td><a href="">Modify</a> <a href="">Remove</a></td>
+      </tr>
+    </table>
+  </div>
+</section>

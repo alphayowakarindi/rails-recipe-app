@@ -1,0 +1,43 @@
+<section id="recipe-form">
+  <h1>Create Recipe</h1>
+  <%= form_with model: @recipe, url: recipes_path do |form| %>
+    <div>
+      <%= form.label :name %><br>
+      <%= form.text_field :name %>
+      <% @recipe.errors.full_messages_for(:name).each do |message| %>
+        <div class="validation-error"><%= message %></div>
+      <% end %>
+    </div>
+    <div>
+      <%= form.label :preparation_time %><br>
+      <%= form.text_field :preparation_time %>
+      <% @recipe.errors.full_messages_for(:preparation_time).each do |message| %>
+        <div class="validation-error"><%= message %></div>
+      <% end %>
+    </div>
+    <div>
+      <%= form.label :cooking_time %><br>
+      <%= form.text_field :cooking_time %>
+      <% @recipe.errors.full_messages_for(:cooking_time).each do |message| %>
+        <div class="validation-error"><%= message %></div>
+      <% end %>
+    </div>
+    <div>
+      <%= form.label :description %><br>
+      <%= form.text_area :description %>
+      <% @recipe.errors.full_messages_for(:description).each do |message| %>
+        <div class="validation-error"><%= message %></div>
+      <% end %>
+    </div>
+    <div>
+      <%= form.check_box :public %>
+      <%= form.label :public %><br>
+      <% @recipe.errors.full_messages_for(:public).each do |message| %>
+        <div class="validation-error"><%= message %></div>
+      <% end %>
+    </div>
+    <div>
+      <%= form.submit 'Submit' %>
+    </div>
+  <% end %>
+</section>

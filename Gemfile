@@ -76,3 +76,6 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 # use device gem for authentication
 gem 'devise'
+
+# use cancancan gem to authorize authenticated users
+gem 'cancancan'
