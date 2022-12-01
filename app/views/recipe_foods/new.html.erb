@@ -1,1 +1,31 @@
-<h1>Add ingredient</h1>
+<section id="add-ingredient">
+  <h1>Add Ingredient for <%= @recipe.name %> recipe</h1>
+  <div>
+    <%= form_with  model: @recipe_food, url: recipe_recipe_foods_path  do |form|%>
+      <div>
+        <div>
+          <%= form.label :ingredient %><br>
+          <%= form.collection_select :food_id, current_user.foods.order(:name), :id, :name, {prompt: 'Choose'} %>
+          <% @recipe_food.errors.full_messages_for(:food_id).each do |message| %>
+            <div class="validation-error"><%= message %></div>
+          <% end %>
+        </div>
+        <div>
+          <%= form.label :quantity %><br>
+          <%= form.number_field :quantity, min: 1 %><br>
+          <% @recipe_food.errors.full_messages_for(:quantity).each do |message| %>
+            <div class="validation-error"><%= message %></div>
+          <% end %>
+        </div>
+        <div>
+          <%= form.submit "Add" %>
+        </div>
+      </div>
+    <%end%>
+    <div >
+      <div>
+        <%=link_to 'Back', recipe_path(@recipe.id)%>
+      </div>
+    </div>
+  </div>
+</section>
