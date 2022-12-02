@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   
   root 'foods#index'
+  get '/recipes/public_recipes', to: 'recipes#public'
+  
 
   resources :foods, except: %i[update]
   resources :recipes, except: %i[update] do
