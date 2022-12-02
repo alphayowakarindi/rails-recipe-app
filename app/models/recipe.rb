@@ -17,6 +17,7 @@ class Recipe < ApplicationRecord
     end
     total
   end
+
   def count_total_food_items
     recipe_foods.sum('quantity')
   end
