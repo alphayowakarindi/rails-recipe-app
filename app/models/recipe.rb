@@ -8,4 +8,17 @@ class Recipe < ApplicationRecord
   validates :cooking_time, presence: true, length: { maximum: 250 }
   validates :description, presence: true, length: { maximum: 500 }
   validates :public, inclusion: [true, false]
+
+  def count_total_price
+    total = 0
+    recipe_foods.each do |rf|
+      food = Food.find(rf.food_id)
+      total += food.price
+    end
+    total
+  end
+
+  def count_total_food_items
+    recipe_foods.sum('quantity')
+  end
 end

@@ -6,6 +6,7 @@ class Ability
 
     can :read, :all
     can :create, :all
+    can :public, :all
     can :destroy, Recipe, user_id: user.id
   end
 end
