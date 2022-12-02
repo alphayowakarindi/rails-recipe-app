@@ -29,24 +29,14 @@
         <th>Value</th>
         <th>Action</th>
       </tr>
-      <tr>
-        <td>Apple</td>
-        <td>20g</td>
-        <td>$100</td>
-        <td><a href="">Modify</a> <a href="">Remove</a></td>
-      </tr>
-      <tr>
-        <td>Pineapple</td>
-        <td>10g</td>
-        <td>$10</td>
-        <td><a href="">Modify</a> <a href="">Remove</a></td>
-      </tr>
-      <tr>
-        <td>Chicken breasts</td>
-        <td>2 units</td>
-        <td>$4</td>
-        <td><a href="">Modify</a> <a href="">Remove</a></td>
-      </tr>
+      <% @recipe.recipe_foods.each do |food| %>
+        <tr>
+          <td> <%= food.food.name %> </td>
+          <td> <%= food.quantity %> x <%= food.food.measurment_unit %></td>
+          <td><%= food.food.price * food.quantity %></td>
+          <td><a href="">Modify</a> <a href="">Remove</a></td>
+        </tr>
+      <%end%>
     </table>
   </div>
 </section>
