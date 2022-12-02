@@ -26,7 +26,7 @@ development:
   database: rails_recipe_app_development
   username: postgres
   port: 5432
-  password: 123456
+  password: admin
   host: localhost
 
   # The specified database role being used to connect to postgres.
@@ -64,8 +64,9 @@ test:
   database: rails_recipe_app_test
   username: postgres
   port: 5432
-  password: 123456
+  password: admin
   host: localhost
+
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -92,3 +93,4 @@ production:
   database: rails_recipe_app_production
   username: rails_recipe_app
   password: <%= ENV["RAILS_RECIPE_APP_DATABASE_PASSWORD"] %>
+  
