@@ -120,6 +120,46 @@ th {
   font-size: 19px;
 }
 
+/* generated list */
+#generated-list {
+  text-align: center;
+}
+
+#generated-list h1 {
+  text-align: center;
+  margin: 25px 0;
+}
+
+#generated-list .table-container {
+  display: grid;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+#generated-list table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%; /* margin: 0 auto; */
+}
+
+#generated-list table td {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+#generated-list table .th {
+  background-color: gray;
+}
+
+#generated-list table tr:nth-child(even) {
+  background-color: rgba(221, 221, 221, 0.4);
+}
+
+#generated-list table td .td-link {
+  color: #551a8b;
+}
+
 /* recipe details */
 #recipe-details {
   padding: 0 25px;
@@ -256,40 +296,6 @@ th {
 }
 
 #recipe-details .food-info table td .td-link {
-  color: #551a8b;
-}
-
-/* generated list */
-#generated-list {
-  text-align: center;
-}
-#generated-list h1 {
-  text-align: center;
-  margin: 25px 0;
-}
-#generated-list .table-container {
-  display: grid;
-  justify-content: center;
-  margin-top: 15px;
-}
-#generated-list #generated-list table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%; /* margin: 0 auto; */
-}
-#generated-list table td,
-th {
-  border: 1px solid #ddd;
-  text-align: left;
-  padding: 8px;
-}
-#generated-list table th {
-  background-color: gray;
-}
-#generated-list table tr:nth-child(even) {
-  background-color: rgba(221, 221, 221, 0.4);
-}
-#generated-list table td .td-link {
   color: #551a8b;
 }
 
