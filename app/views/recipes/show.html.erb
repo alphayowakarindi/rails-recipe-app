@@ -29,12 +29,20 @@
         <th>Value</th>
         <th>Action</th>
       </tr>
-      <% @recipe.recipe_foods.each do |food| %>
+      <% @recipe.recipe_foods.each do |recipe_food| %>
         <tr>
-          <td> <%= food.food.name %> </td>
-          <td> <%= food.quantity %> x <%= food.food.measurment_unit %></td>
-          <td><%= food.food.price * food.quantity %></td>
-          <td><a href="">Modify</a> <a href="">Remove</a></td>
+          <td> <%= recipe_food.food.name %> </td>
+          <td> <%= recipe_food.quantity %> x <%= recipe_food.food.measurment_unit %></td>
+          <td><%= recipe_food.food.price * recipe_food.quantity %></td>
+          <td><a class: 'td-link', href="">Modify</a>
+            <% if can? :destroy, @recipe %>
+              <%=  link_to "Remove", recipe_recipe_food_path(@recipe, recipe_food), class: 'td-link', data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?",
+  
+                  } %>
+            <% end %>
+          </td>
         </tr>
       <%end%>
     </table>

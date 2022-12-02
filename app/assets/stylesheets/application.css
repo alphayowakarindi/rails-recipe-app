@@ -223,6 +223,10 @@ th {
   background-color: rgba(221, 221, 221, 0.4);
 }
 
+#recipe-details .food-info table td .td-link {
+  color: #551a8b;
+}
+
 /* recipe new */
 textarea,
 .recipe-steps {
