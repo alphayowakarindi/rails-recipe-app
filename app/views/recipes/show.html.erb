@@ -18,7 +18,7 @@
   </div>
   <div class="btn-links">
     <a class="btn-link" href="">Generate shopping list</a>
-    <a href="btn-link">Add ingredient</a>
+    <%= link_to 'Add ingredient', new_recipe_recipe_food_path(@recipe), class: 'btn-link' %>
   </div>
   <hr>
   <div class="food-info">
@@ -29,24 +29,22 @@
         <th>Value</th>
         <th>Action</th>
       </tr>
-      <tr>
-        <td>Apple</td>
-        <td>20g</td>
-        <td>$100</td>
-        <td><a href="">Modify</a> <a href="">Remove</a></td>
-      </tr>
-      <tr>
-        <td>Pineapple</td>
-        <td>10g</td>
-        <td>$10</td>
-        <td><a href="">Modify</a> <a href="">Remove</a></td>
-      </tr>
-      <tr>
-        <td>Chicken breasts</td>
-        <td>2 units</td>
-        <td>$4</td>
-        <td><a href="">Modify</a> <a href="">Remove</a></td>
-      </tr>
+      <% @recipe.recipe_foods.each do |recipe_food| %>
+        <tr>
+          <td> <%= recipe_food.food.name %> </td>
+          <td> <%= recipe_food.quantity %> x <%= recipe_food.food.measurment_unit %></td>
+          <td><%= recipe_food.food.price * recipe_food.quantity %></td>
+          <td><a class: 'td-link', href="">Modify</a>
+            <% if can? :destroy, @recipe %>
+              <%=  link_to "Remove", recipe_recipe_food_path(@recipe, recipe_food), class: 'td-link', data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?",
+  
+                  } %>
+            <% end %>
+          </td>
+        </tr>
+      <%end%>
     </table>
   </div>
 </section>

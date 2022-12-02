@@ -223,6 +223,10 @@ th {
   background-color: rgba(221, 221, 221, 0.4);
 }
 
+#recipe-details .food-info table td .td-link {
+  color: #551a8b;
+}
+
 /* recipe new */
 textarea,
 .recipe-steps {
@@ -234,4 +238,34 @@ textarea,
   color: red;
   margin-top: 2px;
   margin-bottom: 8px;
+}
+
+/* fecipe_foods new page */
+#add-ingredient {
+  display: grid;
+  justify-content: center;
+}
+
+#add-ingredient h1 {
+  margin: 25px 0;
+}
+
+#add-ingredient select,
+#add-ingredient input {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+#add-ingredient input[type='submit'] {
+  cursor: pointer;
+}
+
+#add-ingredient label {
+  font-size: 20px;
 }
