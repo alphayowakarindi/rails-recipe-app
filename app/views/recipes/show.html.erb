@@ -17,7 +17,7 @@
     </div>
   </div>
   <div class="btn-links">
-    <a class="btn-link" href="">Generate shopping list</a>
+    <%= link_to "Generate shopping list", recipe_shopping_lists_path(@recipe), class: "btn-link" %>
     <%= link_to 'Add ingredient', new_recipe_recipe_food_path(@recipe), class: 'btn-link' %>
   </div>
   <hr>
