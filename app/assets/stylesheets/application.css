@@ -59,6 +59,39 @@ th {
   padding: 5px;
 }
 
+/* NAVBAR */
+.navbar {
+  width: 80%;
+  padding: 1.5rem 10% 1.5rem 10%;
+  margin-bottom: 1rem;
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  justify-content: space-between;
+}
+
+.navbar li {
+  list-style: none;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.navbar li:last-child {
+  display: none;
+}
+
+.navbar li a {
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  color: #0151ff;
+}
+
+
 /* recipes index */
 #recipes {
   padding-top: 50px;
