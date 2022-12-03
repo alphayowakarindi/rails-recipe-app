@@ -1,0 +1,14 @@
+<section id="recipes">
+  <% @recipes.each do |recipe| %>
+    <div class="recipe-card">
+      <div class="title">
+        <h3> <%= link_to recipe.name, recipe %> </h3>
+        <span> David melon </span>
+      </div>
+      <div class="info">
+        <p>Total food items: <%= recipe.count_total_food_items %></p>
+              <p>Total price: $<%= recipe.count_total_price %></p>
+      </div>
+    </div>
+  <% end %>
+</section>
